@@ -1,0 +1,333 @@
+Theme 3 morning
+~~~~~~~~~~~~~~~
+Those present:
+
+Balaji
+Bert Semtner
+Per Nyberg (Cray)
+Kent Winchell (IBM)
+Al Kellie (NCAR)
+Walter Zwiefehhofer (ECMWF)
+Micheal Wehner (Berkely)
+David Blaskocich (IBM)
+Vicky Pope (Hadley Centre)
+Don Anderson (NASA)
+Omar Ghattas (Texas)
+Hiroshi Takahara
+Max Suares (NASA)
+Hilary Weller (University of Reading)
+Matthew Piggott (Imperial College)
+Dave Burridge (WMO)
+David Marshall (Oxford)
+
+Minutes: (and seconds)
+
+Blaskovich: There is a social need for climate prediction. This is generally well presented.
+			But how do climate scientists take advantage of technology? This is a weak part.
+			Are universities properly used?
+			How can suppliers help climate scientists when they are under commercial pressures.
+	  One institute does best: NCAR for production and experiments.
+	  We need to understand new technology and stay in sync with suppliers.
+
+Semtner: Some parts of ocean codes wont parallelize enough, for example the solution of the vertical mode. We are not ready for multicore. We need new algorithms and to work with computer scientists and mathematicians.
+
+Winchell: All new systems in the future will be different. You need access to the new machine before you can work out how to run on it.
+
+Ghattas: It is hard to benchmark new computers with old codes.
+
+Nyberg: There is currently no incentive for innovation for vendors because they must meet old benchmark standards.
+
+Wichell: We must not be afraid to fail.
+
+Kinter: What strategic partnerships should we have for chip design, finances, algorithms and system software.
+
+Zwiefehoffer: We need more concrete objectives: we need to solve a particular problem within 10 years and get the hardware in 4 years.
+
+Suarez: A concrete goal is a 1km simulation which is just a demo calculation and so can be done slowly. Within 3-5 years we need to build a machine for a ground breaking calculation that the US cannot currently do. We need hardware for a 1km simulation that no US agency can purchase by itself and so it must be international.
+
+Kinter: Can we have a machine dedicated to climate rather than to one US agency?
+
+Wehner: A presentation describing the computer that would be needed for a 1km global simulation:
+
+The iPod supercomputer
+
+We need less memory per flop as resolution increases because memory scales with resolution but computer power scales also with the time step.
+
+For 1km global resolution we need:
+
+* 20 million processors for a speedup of 1000 over real time in order to simulate 100 years in one month
+* 5MB memory per processor
+* 10 Petaflops sustained (Dave Randall's hexagonal model will run at 1km)
+* 100 Terabytes of memory
+* 2 million horizontal subdomains
+* 100 cells per subdomain
+* Each processor 500Mflops
+* 20,000 nearest neighbour send-receive pairs per subdomain oer simulated hour of ~10KB each
+
+This is extrapolating from existing technologies
+1 billion dollars
+150 MWatts
+1/10 of a nuclear reactor
+
+Nyburg: The impossible bit is the network.
+		This machine wont be useful for anything but this 1km global simulation because it has just 5MB of memory per processor
+
+Wehner: This computer is very specialized and will therefore be efficient as it is tailored for climate simulation. The software and hardware must evolve simultaneously.
+
+Anderson: This needs a programmatic infrastructure
+
+Kinter: Flops are not the problem, it is the switch. Is this feasible?
+
+Nyberg: We can build anything. All machines are tailored. But I can't say the cost. Similar projects have cost $1billion. The switch is the most important part
+
+Kinter: When do we decide this?
+
+Baskovich: $500 million is the order of magnitude for the machine
+
+Ghattas: Is this an application specific system? Are you wed to existing algorithms?
+
+Suarez: This computer is for a standard algorithm. Not adaptive grids.
+
+Ghattas: You need a different system for implicit solvers, eg for ice sheets. What about data assimilation?
+
+Pope: If we don't have a custom machine, what resolution can we run on what timescale?
+
+Nyburg: That depends on the algorithm.
+
+Kinter: The table I presented is based on WRF and assumes that WRF continues to scale as well as it does now
+
+Kellie: The dynamical core of CAM scales to 100,000 cores
+
+Semtner: The Cray - Intell collaboration has created more high speed communications which will lead to better computers for fluids problems. But it is hard to scale. Cache must be used more.
+
+Kinter: We need a succinct statement
+
+Wiefehhoffer: We are discussing one high resolution run as opposed to anything else
+
+Pope: This model needs 10 years development
+
+Suarez: 1km is only the sales pitch. We must do other runs too
+
+Kinter: A 1km run should be a demonstration project. We don't know if we can make better regional climate predictions sing 1km resolution. Does resolving clouds lead to better climate simulation? We don't know.
+
+Suarez: It is unlikely that we will have  big change at 1km resolution
+
+Semtner: We could take 1.5 years to run 1 year at 1km
+
+Pope: We need process studies running 1km in the tropics in regional models first. There is no point in running global 1km runs until we've analysed regional tropical 1km runs
+
+Nyburg: You want general purpose machines for the foreseeable future. We have machines now useful for you
+
+Wehner: It won't take us 10 years to develop a climate model because we are not starting from year zero.
+
+Pope: Going from HadCM3 to HadGEM1 to 100 man years of effort for moderate change
+
+Wehner: I presented a high risk solution. We must take risks and have backup plans
+
+Kinter: Let's talk about data - Balaji
+
+Anderson: Analogy to a satellite mission
+
+Blaskovich: Our vision, our stake in the ground must be 1km resolution. this computer is required. How do we get there? We should have different groups for production and experiments
+
+Pope: Resistance to going straight to 1km
+
+Anderson: 1km is just a milestone
+
+Aside from Hilary: Would going to 1 mile resolution be a kilometer stone?
+
+Kinter: We must accelerate progress in resolution to get to 1km
+
+Semtner: 1km is important to resolve cloud complexes. It is not just resolution for resolution's sake.
+
+Wehner: Our resolution is limited by research limitations
+
+Pope: Ensembles and earth system
+
+Presentation by Balaji on "Making the heroic routine"
+
+We can transform the way we handle data
+IPCC AR4 archive at PCMDI
+GFDL - 5500 model years
+	 - many terabytes of data
+IPCC is all ready petascale
+
+The FMS user interface: FRE
+to setup, run, post process and archive models
+different grids will be used in the next issue
+better to save on native grid
+but IPCC archive wants lat-lon
+GFDL 0.5-1 deg atmos, 1/4 deg ocean for IPCC5 for regional climate
+Petascale methodologies - ESC
+		  				- MAPS
+						- GO-ESSP and CF
+A model curator gives a complete description of how a model was run. We must be able to rerun bits of a model exactly
+Wind mills will slow down the wind if used alot in the N. hemi
+We did a branch run with a different surface roughness
+
+Wehner: We need high quality searching of meta data and complete and well structured meta data. The volume of data means that we need HPC for analysis of data. Analysis is parallelizable
+
+Balaji: ARS: all centres will host their own data. PCMDI will host the meta data.
+
+Wehner: Do you analyse remotely or locally
+
+Kinter: I did my PhD using punchcards
+
+Aside from Hilary: This got me wondering how old Jim must be. He's got to be at least 45 to have used punchcards and have 2 children at Princeton. So I looked at his CV on the web and saw that he finished his first degree in 1979! So more like 50! Surprising. (And you have no privacy!)
+
+Balaji: Hierarchical Aai to deal with large data better and remotely
+
+Kinter: Heroic routines without discrimination means that if you put garbage in, you get garbage out
+
+Pope: Data should not be so accessible because people misuse data
+
+Balaji: Systems software will be very different. Our code will need rewriting which will need collaboration
+
+Pope: An intermediate step must be 1km regional models
+
+Kinter: can we do a bit better cost-benefit commodity of a tailored machine? Does this need to be international?
+
+Afternoon Session
+~~~~~~~~~~~~~~~~~
+Those present:
+Balaji
+Bert Semtner
+Per Nyberg (Cray)
+Al Kellie (NCAR)
+Walter Zwiefehhofer (ECMWF)
+Matthew Piggott (Imperial College)
+Almut Gassmann (Max Planck)
+Peter
+Bjorn Stevens
+Don Anderson (NASA)
+Omar Ghattas (Texas)
+Hiroshi Takahara
+Hilary Weller (University of Reading)
+Helene Banks (Hadley Centre)
+Hiroyasu
+
+Stevens: Climate models need more radiation than NWP
+
+Balaji: Climate models are more stringent, eg they need to conserve mass
+
+Banks: We get much less than 20-50 years per day running climate projections
+
+Balaji: We get 20 years per day at climate resolution
+
+Stevens: We won't get scaling as well as we do now
+
+Kinter: We wont get 1km resolution
+
+Balaji: Future xxxx will be strong scaling. We need more effort
+
+Stevens: Strong scaling wont help
+
+Ghattas: We will have to do strong scaling which will get easier with memory
+
+Nyburg: Current codes are not appropriate for current machines
+
+Takahara: Scaling dependent on memory band width and physical processes
+
+Anderson: Do we need to optimise out codes better for our current machines?
+
+Kellie: Time to solution is the only important thing. Not flops
+
+Stevens: We will get a factor of 1000 worse on the flops than K=Jim's table and therefore a factor of 10 worse on resolution
+
+Kinter: That is an extreme level of caution. We are not doing a bad job of using out current machines. We must tell politicians that we must get to higher resolution. But computer scientists tell politicians that we cannot write code.
+
+Anderson: We need more investment in software. Others want more complex parameterization. We must avoid double computing. Different parameterisations compute the same thing twice.
+
+Kinter: Eg each parameterisation calculates the saturation vapour pressure
+
+Kellie and Stevens: Chemistry makes things much slower
+
+Balaji: Who will speed up the codes?
+
+Nyburb: Tools for models are expensive. It is hard to port a scalar code which uses cache onto a vector machine. Better software engineering gives a bigger return on investment than buying tools
+
+Balaji: Now scientists write code. Is this the right way to do things?
+
+Stevens: Model of a machine or a machine for many models
+
+Ghattas: Students must understand physics and programming at NFS. Computer science is not done enough. We must understand computing. Computer scientists don't do floating point
+
+Nyburg: HECRTF: High end computing reinvigoration task force
+
+Stevens: The Japanese did what we want to do with the Earth Simulator and the results have taken a long time. The interesting results are only now coming out - once their machine is no longer the fastest
+
+Stevens: Adaptivity not useful for climate
+
+---------------------------------------
+------------ Coffee break -------------
+---------------------------------------
+
+Suarez: USA has 2 dedicated weather facilities. All weather facilities are dedicated. Climate modelling needs that too
+
+Kinter: ECMWF is an organisational model. A very large targetted service
+
+Anderson: ECMWF delivers a forecast not a service
+
+Peter: If the centre runs different models then we need a framework
+
+Nyburg: Not collaboration, we need more investment in computational science
+
+Stevens: ECMWF is owned by the weather services so that it doesn't supersede them
+
+Anderson: Initially ECMWF was doing best, now others have caught up
+
+Stevens: Is this a facility of facilities?
+
+Kinter: This is the jewel of facilities
+
+Balaji: Others will catch up. This centre must always stay ahead
+
+Semtner: Cray and IBM are hybrid vector and parallel
+
+NyburgL Machines are highly tailorable but not hybrid
+
+Takahara: Need strong interconnect
+
+Suarez: We don't want a specialised climate computer, but it will be bigger than anything else
+
+Zwiefehhofer: Climate is well within what the vendors are all ready doing. We just want a large version
+
+Ghattas: Sparse matrices and multigrid on cell processrors and accelarators. Can climate models capitalise on this?
+
+Stevens: Maybe MPI and OpenMP will last as long as FORTRAN
+
+Suarez: Can't run OpenMP on every core
+
+Zwiefehhofer: No discussion of IO. We want a one word answer from the computer
+
+Semtner: Physical consideration dictates the need for 1km resolution
+
+Many: Nothing special about 1km resolution. We must use non-hydrostatic. But all models now are non-hydrostatic.
+
+We will create qualitatively new simulations
+Cloud resolving capability
+We want to run 1000 days per day
+
+Balaji: Do we want to say something about capacity?
+
+Kinter: No requirement for centre director to keep machine busy
+		Software: Is PRISM or ESMF the way to go?
+
+Anderson: Framework for a modelling system
+		  We need parallel post processing but there are currently no plans
+
+Balaji: We should have feature detection running on the fly
+
+rule of thumb: save 50 bytes per KFlop
+
+software: What will it take to make 1 million cores hum
+		  PGAS, frameworks
+
+What will replace MPI?
+There will be as much change as from vector to scalar transition to a new programming model.
+
+NFS thinks 3 years lead time is necessary to get codes ready to go on a 130K processor machine
+
+Facility for visitors with models or centre with one model?
+
+So difficult to write - make it one model to start with

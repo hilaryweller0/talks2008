@@ -1,0 +1,57 @@
+DEVELOPING THE NEXT GENERATION CLIMATE SYSTEM MODELS:
+CHALLENGES AND ACHIEVEMENTS
+
+Comments from Hilary Weller
+
+1. Abstract
+
+I think the first paragraph of the abstract is naive. I would say that the approaches to modelling the climate system have changed much. Semi-Lagrangian is an important new approach. And the Frontier Research centre are running a climate model on an icosahedral grid. This is also a big change and uses some of the same techniques as engineering CFD on unstructured meshes. Also, alot of the best and earliest work on adaptive meshes has been done by atmospheric and oceanographic scientists (Fiedler, and Trapp, 1993, Skamarock and Klemp, 1993, Staniforth and Mitchell, 1978, Bacon et al 2000) (These are all in atmospheric modelling as that is what I mostly ready about). We still may have something to learn from engineers. But engineers have not solved all of our problems all ready. In fact engineers have much to learn from atmospheric scientists. As a first paragraph I would write something like:
+
+"Climate models have been improving in accuracy and efficiency over the past few decades but it now seems that these incremental improvements may be slowing. As computing becomes massively parallel, our legacy codes are less suitable, and even with the increased resolution that we are now using, these models cannot represent the multi-scale nature of the problem. It is now time to reconsider the use of adaptive mesh refinement for weather and climate forecasting in order to achieve  good scaling and representation of the wide range of spatial scales in the atmosphere and ocean."
+
+2. Section 3. Numerical methods for multi-scale systems
+
+Your paragraph before figure 4 starting "In the atmosphere, adaptive mesh refinement is often based around"... is misleading. I think it is important to describe exactly what has been done. You are discussing Nikos's work on tracer transport, not solution of the momentum and continuity equation. I think that a more informative replacement would be:
+
+"In the atmosphere, static mesh refinement is used operationally for weather forecasts using stretched grids (see Fox Rab-Rabinovitz et al 2006) or using one-way nesting (eg Capon 2003). Dynamic refinement with two-way nesting of block structured grids has been studied for use in atmospheric models for some time now (eg Fiedler and Trapp, 1993, Skamarock and Klemp, 1993) but has not yet gained widespread popularity. Unstructured and polyhedral models of the atmosphere are also now being considered for adaptive refinement of the atmosphere (eg Bacon et al 2000, Läuter et al, 2007 and Weller and Weller, 2008). These techniques may have advantages in using gradual refinement. Unstructured meshes of quadrilaterals with non-conforming 2:1 refinement patterns are also now gaining some popularity (eg Fournier et al, 2004).
+
+Static refinement may prove beneficial for regional climate modelling and improved representation of orography. Dynamic refinement may additionally prove beneficial for hurricane tracking (eg Gopalakrishnan et al, 2002) , resolution of deep convection and offline tracer transport (eg. Hubbard and Nikiforakis, 2003).  Tracer transport within a tropopause fold simulated using dynamic mesh adaptation is shown in figure 4."
+
+3. Where you ask for my input, how about the following:
+
+"We are testing various new strategies for adaptive modelling the atmosphere using AtmosFOAM. AtmosFOAM is a polyhedral model of the shallow water equations on the sphere written using OpenFOAM (Weller and Weller 2008 and Weller et al, submitted). Results from the simulation of a barotropically unstable jet after six days are shown in figure 5 (Galewsky et al, 2004). The first plot of figure 5 is the AtmosFOAM reference solution, the second is on a coarser polygonal mesh with static local refinement and the third is on a cubed sphere mesh with static 2:1 local refinement. The polygonal mesh reproduces the reference solution well with 14% of the cells but, although the cubed sphere has 21% of the cells the results are poor; instabilities in the jet are spuriously triggered at the cube edges so the instabilities in the jet have grown unrealistically high in the six days. This demonstrates an advantage of polygonal meshes."
+
+4. Figure 5 is attached and the figure caption is:
+
+"Vorticity of an inviscid, barotropically unstable get after 6 days simulated using AtmosFOAM. Test case from Galewsky et al, 2004. Top plot is the AtmosFOAM reference solution (256x512 reduced lat-lon grid), the middle plot uses a non-uniform polygonal mesh and the bottom plot uses a cubed sphere with 2:1 refinement patterns. Each simulation uses a time step of 150 seconds.
+
+5. Another point
+Neither the ICOM group, Nikos and Kevin or anyone else, have yet shown that 3D adaptivity will be beneficial. They are of course aiming to demonstrate this but it is as yet unproved.
+
+6. Additional References:
+
+Bacon, D.P. and co-authors, 2000: A Dynamically Adapting Weather and Dispersion Model: The Operational Multiscale Environment Model with Grid Adaptivity (OMEGA). Mon. Wea Rev. 128(7): 2044-2076
+
+Capon, R.A., 2003: Wind speed-up in the Dover Straits with the Met Office New Dynamics Model. Met. Apps. 10(3):229-237
+
+Fiedler, B.H. and R.J. Trapp, 1993: A Fast Dynamic Grid Adaption Scheme for Meteorological Flows. Mon. Wea Rev. 121(10):2879-2888
+
+Fox-Rabinovitz, M., J. Cote, B. Dugas, M. Deque and J.L. McGregor, 2006: Variable resolution general circulation models: Stretched-grid model intercomparison project (SGMIP). J. Geophys. Res. 111(D16):D16104.
+
+Fournier, A., M. Taylor and J.J. Tribbia, 2004: The Spectral Element Atmosphere Model ({SEAM}): High-Resolution Parallel Computation and Localized Resolution of Regional Dynamics. Mon. Wea. Rev 132(3):726-748
+
+Galewsky, J., R.K. Scott and L.M. Polvani, 2004: An initial-value problem for testing numerical models of the global shallow-water equations. Tellus 56A(5):429-440
+
+Gopalakrishnan, S.G. And Co-authors, 2002: An operational multiscale hurricane forecasting system. Mon. Wea. Rev. 130(7):1830-1847
+
+Hubbard, M.E. and N. Nikiforakis, 2003: A three-dimensional, adaptive, Godunov-type model for global atmospheric flows. Mon. Wea. Rev. 131(8):1848-1864
+
+Läuter, M., D. Handorf, N. Rakowsky, J. Behrens, S. Frickenhaus, M. Best, K. Dethloff and W. Hiller, 2007: A parallel adaptive barotropic model of the atmosphere. J. Comput. Phys. 223(2):609-628
+
+Skamarock, W.C. and J.B. Klemp, 1993: Adaptive Grid Refinement for Two-Dimensional and Three-Dimensional Nonhydrostatic Atmospheric Flow. Mon. Wea. Rev. 121(3):788-804
+
+Staniforth, A.N. and H.L. Mitchell, 1978: Variable-resolution finite-element technique for regional forecasting with primitive equations. Mon. Wea. Rev. 106(4):439-447
+
+Weller, Hilary and H.G. Weller, 2008: A high-order arbitrarily unstructured finite-volume model of the global atmosphere: tests solving the shallow-water equations. Int. J. Num. Methods Fluids 56(8):1589-1596
+
+Weller, Hilary, H.G. Weller and A. Fournier: Towards a Polyhedral Model of the Global Atmosphere: Shallow-Water Test Cases. Submitted to J. Comp. Phys.

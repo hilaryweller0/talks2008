@@ -1,0 +1,11 @@
+Adaptive Mesh Modelling of the Global Atmosphere
+
+Hilary Weller
+
+Adaptive meshing of the atmosphere may prove beneficial for resolving tropical cyclones, fronts, convection and orography. However there are a number of challenges before these methods can be effective operationally. These include finding appropriate mesh refinement criteria, automatic re-meshing for unstructured meshes and conservative mesh to mesh mapping which does not alter the partition between balanced and unbalanced fields.
+
+I will describe a new technique of calculating where mesh resolution may be needed up to twelve hours into the future so that a forecast can be run for as long as possible before mapping onto a new mesh. Re-meshing and mapping onto a new mesh inevitably carries some cost and degrades the solution to some extent. Therefore if it can be done as infrequently as possible, adaptive meshing could be even more cost effective and accurate.
+
+I will show results of a simulation of a barotropically unstable mid-latitude jet for 12 days in which the mesh is adapted every one, three and twelve hours with different refinement criteria. I will compare results on block structured meshes and meshes of polygons. I will also show examples of how refinement of orography does not necessarily lead to a more accurate global solution.
+
+keywords: refinement, criteria, equations, numerical

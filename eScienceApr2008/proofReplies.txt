@@ -1,0 +1,77 @@
+Author Queries
+JOB NUMBER: 20080207
+JOURNAL: RSTA
+
+Our comments:
+
+Page 7, line 317:
+Just "ICOM", not "The ICOM", sticking to our original text
+
+Page 7, line 324 replace "in three-dimensional" with "in three dimensions"
+
+Page 7, line 332, again, replace "The ICOM" with "ICOM" as in our original text
+
+Please could the subfigures in figure 5 occupy the full half width of the text
+
+You have modified figure 3 and decreased the resolution so that it is no longer so clear. We have modified fig 3 as to your requirements with high resolution. The new fig 3 is attached.
+
+Answers to your questions:
+
+Q1  In figures 1 and 2, please note that the statement `from Shaffrey et al. in press' has been
+    changed to `adapted from Shaffrey et al. (in press)' as some changes have been made to
+    comply with the Journal style.
+
+Fine
+
+Q2 Please define the term `NP' given in figure 4.
+
+North Pole
+
+Q3 Please give the year during which Bates & Nikiforakis (unpublished data) were generated.
+
+2008
+
+Q4 Please expand the abbreviation `horiz.' in table 1.
+
+horizontal
+
+Q5 The corresponding author and the respective email address have not been provided in the
+    manuscript. Hence we have followed the manuscript central metadata for the above details.
+    Please check and approve.
+
+Would it be appropriate for Pier-Luigi to be the corresponding author now?
+
+Q6 Please note that the reference citation Fox Rab-Rabinovitz et al. (2006) has been changed
+    to Fox-Rabinovitz et al. (2006) with respect to the reference list provided.
+
+Thank you
+
+Q7 Please check the sense of the sentence `Again, how the biosphere evolves and interacts.'
+
+This makes perfect sense to me. I cannot suggest an alternative
+
+Q8 Please note that the reference citation Moss et al. (2004) has been changed to Moss et al. (2001) with respect to the reference list provided.
+
+Yes, thank you
+
+Q9 Please provide complete details for reference IPCC (2007).
+
+IPCC, 2007: Climate Change 2007: The Physical Science Basis. Contribution
+of Working Group 1 to the Fourth Assessment Report of the
+Intergovernmental Panel on Climate Change, Solomon, S., D. Qin,
+M. Manning, Z. Chen, M. Marquis, K.B. Averyt, M. Tignor, and
+H.L. Miller (eds.), Cambridge University Press, Cambridge, United
+Kingdom and New York, NY, USA, 996 pp.
+
+
+Q10 Please update the publication details in Risien & Chelton (submitted).
+
+Risien C.M., Chelton, D.B. (2008) A global climatology of surface wind and wind stress fields from 8 years of QuikSCAT scatterometer data. Journal of Physical Oceanography: 38, 2379-2413 In Press. DOI: 10.1175/2008JPO3881.1
+
+Q11 Please update the publication details in Shaffrey et al. (in press).
+
+Looks like J Clim still haven't got this out. It has a DOI number so it should stay as it is
+
+Q12 Please update the publication details in Weller et al. (submitted).
+
+Remove reference to this paper. (Page 10, Line 450)

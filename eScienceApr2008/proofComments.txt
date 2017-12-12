@@ -1,0 +1,22 @@
+Author Queries
+JOB NUMBER: 20080207
+JOURNAL: RSTA
+
+Q1  In figures 1 and 2, please note that the statement `from Shaffrey et al. in press' has been
+    changed to `adapted from Shaffrey et al. (in press)' as some changes have been made to
+    comply with the Journal style.
+Q2 Please define the term `NP' given in figure 4.
+Q3 Please give the year during which Bates & Nikiforakis (unpublished data) were generated.
+Q4 Please expand the abbreviation `horiz.' in table 1.
+Q5 The corresponding author and the respective email address have not been provided in the
+    manuscript. Hence we have followed the manuscript central metadata for the above details.
+    Please check and approve.
+Q6 Please note that the reference citation Fox Rab-Rabinovitz et al. (2006) has been changed
+    to Fox-Rabinovitz et al. (2006) with respect to the reference list provided.
+Q7 Please check the sense of the sentence `Again, how the biosphere evolves and interacts.'
+Q8 Please note that the reference citation Moss et al. (2004) has been changed to Moss et al.
+    (2001) with respect to the reference list provided.
+Q9 Please provide complete details for reference IPCC (2007).
+Q10 Please update the publication details in Risien & Chelton (submitted).
+Q11 Please update the publication details in Shaffrey et al. (in press).
+Q12 Please update the publication details in Weller et al. (submitted).

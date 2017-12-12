@@ -1,0 +1,10 @@
+
+
+Re: the phrase "hardly progressed"
+
+how about "changed little in structure"?
+
+With regard to the comment about sub-grid scale processes, how about adding something like this to the end of section 3.1:
+
+The representation of sub grid scale processes should always change when resolution changes, even when using a uniform. However this is not currently a standard technique. When using any kind of multi-resolution grid, it will be even more important for sub grid scale parameterizations to depend on grid spacing. Thus, in particular, schemes for sub-grid scale clouds and buoyant convection will need to be re-derived so that they gradually have less affect as resolution increases. 
+

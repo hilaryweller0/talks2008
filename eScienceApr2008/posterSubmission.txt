@@ -1,0 +1,9 @@
+Dr Hilary Weller
+NCAS Climate, Department of Meteorology, University of Reading
+h.weller@rdg.ac.uk
+
+Co-author: Mr Henry Weller, OpenCFD Limited
+
+Poster Title and abstract:
+
+OpenFOAM and AtmosFOAM: Polyhedral Modelling of the Global Atmosphere

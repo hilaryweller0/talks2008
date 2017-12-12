@@ -1,0 +1,10 @@
+Unstructured models of the atmosphere (including polyhedral models) allow refinement of regions of interest or of high error. However fully structured, uniform resolution models have previously been more accurate and efficient. As computers become massively parallel, the relative efficiency of unstructured models improves. We present solutions to some of the long-standing problems with models with any kind of local refinement. There are a number of desirable features of a model that have not before been achieved together:
+
+A mesh with local refinement
+Staggered locations of pressure and velocity components to avoid spurious oscillations
+Accuracy at least second order globally
+Conservation of momentum, potential vorticity, energy and mass
+No artificial viscosity, diffusion or filtering
+An implicit solution allowing a long time step
+
+We the compare accuracy of various mesh structures: the cubed sphere, latitude-longitude, hexagonal icosohedral and triangular icosohedral and the accuracy of gradual versus 2:1 mesh refinement. 
